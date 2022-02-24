@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 
     private val movies = mutableListOf<Movie>()
     private lateinit var rvMovies: RecyclerView
+    //private var scrollListener: EndlessRecyclerViewScrollListener? = null
 
     //override fun onConfigurationChanged(newConfig: Configuration) {
      //   super.onConfigurationChanged(newConfig)
@@ -49,12 +50,14 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     override fun onSuccess(statusCode: Int, headers: Headers?, json: JSON) {
-                        Log.i(TAG, "onSuccess: JSON data $json")
+                        //Log.i(TAG, "onSuccess: JSON data $json")
+                        //new code for endless scrolling
+                        //movies.clear()
                         try {
                             val movieJsonArray = json.jsonObject.getJSONArray("results")
                             movies.addAll(Movie.fromJsonArray(movieJsonArray))
                             movieAdapter.notifyDataSetChanged()
-                            Log.i(TAG, "Movie List $movies")
+                            //Log.i(TAG, "Movie List $movies")
                         } catch (e: JSONException){
                             Log.e(TAG, "Encountered exception $e")
                         }

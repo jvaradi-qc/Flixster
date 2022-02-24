@@ -20,17 +20,17 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        Log.i(TAG,"onCreateViewHolder")
+        //Log.i(TAG,"onCreateViewHolder")
 
         val view = LayoutInflater.from(context).inflate(R.layout.item_movie, parent, false)
         orientation = view.getContext().getResources().getConfiguration().orientation
-        Log.i("MovieAdapter", "view orientation: $orientation")
+        //Log.i("MovieAdapter", "view orientation: $orientation")
         return ViewHolder(view)
 
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        Log.i(TAG, "onBindViewHolder position $position")
+        //Log.i(TAG, "onBindViewHolder position $position")
         val movie = movies[position]
         holder.bind(movie)
     }
@@ -47,16 +47,17 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
 
         fun bind(movie: Movie) {
             //Log.i(TAG, "ivBackdrop $ivBackdrop")
-            Log.i(TAG, "ivPoster $ivPoster")
+            //Log.i(TAG, "ivPoster $ivPoster")
             tvTitle.text = movie.title
             tvOverview.text = movie.overview
-            val orientPortFlag = Configuration.ORIENTATION_PORTRAIT
-            Log.i(TAG, "orientPortFlag $orientPortFlag")
+            //val orientPortFlag = Configuration.ORIENTATION_PORTRAIT
+            //Log.i(TAG, "orientPortFlag $orientPortFlag")
 
-            val orientLandFlag = Configuration.ORIENTATION_LANDSCAPE
-            Log.i(TAG, "orientLandscapeFlag $orientLandFlag")
+            //val orientLandFlag = Configuration.ORIENTATION_LANDSCAPE
+            //Log.i(TAG, "orientLandscapeFlag $orientLandFlag")
             //val orient = ivPoster.resources.configuration.orientation
             //Log.i(TAG, "orientVariable: $orient")
+
             if(orientation == Configuration.ORIENTATION_PORTRAIT){
                 Glide.with(context).load(movie.posterImageUrl).into(ivPoster)
             }
