@@ -25,10 +25,12 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 ### App Walkthough GIF
 `TODO://` Add the URL to your animated app walkthough `gif` in the image tag below, `YOUR_GIF_URL_HERE`. Make sure the gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after after adding gif)
 
-<img src="YOUR_GIF_URL_HERE" width=250><br>
+<img src="https://imgur.com/BauBquI" width=250><br>
 
 ### Notes
-Describe any challenges encountered while building the app.
+Biggest challenge has been learning Kotlin. 
+Spent a lot of time troubleshooting issues when trying to implement landscape orientation.  
+Would also like to add other features such as endless scrolling capability to retrieve paged data from API.
 
 ### Open-source libraries used
 
