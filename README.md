@@ -31,6 +31,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 Biggest challenge has been learning Kotlin. 
 Spent a lot of time troubleshooting issues when trying to implement landscape orientation.  
 Latest version includes endless scrolling feature, but I ran into some issues where some of the movies seem to show up multiple times. Need to conduct further testing to make sure this feature is working properly.
+Fixed duplication issue with endless scrolling by setting currentpage = 1 in EndlessRecyclerviewScrollListener.kt
 
 
 ### Open-source libraries used
